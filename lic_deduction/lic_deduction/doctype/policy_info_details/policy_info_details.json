@@ -1,0 +1,225 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2024-04-08 12:19:29.815731",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "policy_no",
+  "policy_amount",
+  "column_break_devhv",
+  "inst_amount",
+  "balance",
+  "periodicity",
+  "column_break_4",
+  "start_date",
+  "end_date",
+  "no_of_visits",
+  "schedule_details",
+  "payment_start_date",
+  "payment_end_date",
+  "column_break_10",
+  "disabled",
+  "reference_id",
+  "sales_person",
+  "reference",
+  "serial_no",
+  "sales_order"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "eval: doc.periodicity",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "oldfieldname": "start_date",
+   "oldfieldtype": "Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "columns": 2,
+   "depends_on": "eval: doc.start_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "oldfieldname": "end_date",
+   "oldfieldtype": "Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "periodicity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Frequency",
+   "oldfieldname": "periodicity",
+   "oldfieldtype": "Select",
+   "options": "\nMonthly\nQuarterly\nHalf Yearly\nYearly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "schedule_details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "default": "1",
+   "depends_on": "eval:doc.end_date",
+   "fieldname": "no_of_visits",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Installation",
+   "oldfieldname": "no_of_visits",
+   "oldfieldtype": "Int",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Sales Team",
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Sales Person",
+   "oldfieldname": "incharge_name",
+   "oldfieldtype": "Link",
+   "options": "Sales Person"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Reference"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Small Text",
+   "label": "Serial No",
+   "oldfieldname": "serial_no",
+   "oldfieldtype": "Small Text"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "no_copy": 1,
+   "oldfieldname": "prevdoc_docname",
+   "oldfieldtype": "Data",
+   "options": "Sales Order",
+   "print_hide": 1,
+   "print_width": "150px",
+   "read_only": 1,
+   "search_index": 1,
+   "width": "150px"
+  },
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Policy Type",
+   "oldfieldname": "item_code",
+   "oldfieldtype": "Link",
+   "options": "Policy Type",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Policy Name",
+   "oldfieldname": "item_name",
+   "oldfieldtype": "Data",
+   "options": "Policy Name"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "item_name.policy_no",
+   "fieldname": "policy_no",
+   "fieldtype": "Data",
+   "label": "Policy No"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "item_name.policy_amount",
+   "fieldname": "policy_amount",
+   "fieldtype": "Float",
+   "label": "Policy Amount",
+   "precision": "2"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "inst_amount",
+   "fieldtype": "Float",
+   "label": "Inst. Amount",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "balance",
+   "fieldtype": "Float",
+   "label": "Balance",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_start_date",
+   "fieldtype": "Date",
+   "label": "Payment Start Date"
+  },
+  {
+   "fieldname": "payment_end_date",
+   "fieldtype": "Date",
+   "label": "Payment End Date"
+  },
+  {
+   "fieldname": "column_break_devhv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "reference_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reference ID"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-09 18:46:05.017343",
+ "modified_by": "Administrator",
+ "module": "Lic Deduction",
+ "name": "Policy Info Details",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

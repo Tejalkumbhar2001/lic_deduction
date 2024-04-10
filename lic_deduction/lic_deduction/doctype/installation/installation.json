@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2024-04-08 13:00:55.455989",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "column_break_3",
+  "scheduled_date",
+  "actual_date",
+  "section_break_6",
+  "completion_status",
+  "item_reference",
+  "reference_id",
+  "section_break_10",
+  "serial_no",
+  "disabled",
+  "is_paid"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 2,
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Installment Date",
+   "oldfieldname": "scheduled_date",
+   "oldfieldtype": "Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "actual_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Actual Date",
+   "no_copy": 1,
+   "oldfieldname": "actual_date",
+   "oldfieldtype": "Date",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 2,
+   "default": "Pending",
+   "fieldname": "completion_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Completion Status",
+   "options": "Pending\nFully Completed"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Serial No",
+   "oldfieldname": "serial_no",
+   "oldfieldtype": "Small Text",
+   "print_width": "160px",
+   "read_only": 1,
+   "width": "160px"
+  },
+  {
+   "fieldname": "item_reference",
+   "fieldtype": "Link",
+   "label": "Item Reference",
+   "options": "Policy Info Details",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Policy Type",
+   "oldfieldname": "item_code",
+   "oldfieldtype": "Link",
+   "options": "Policy Type",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Policy Name",
+   "oldfieldname": "item_name",
+   "oldfieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Disabled"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is Paid"
+  },
+  {
+   "fetch_from": "item_reference.reference_id",
+   "fieldname": "reference_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reference ID"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-10 13:48:22.913832",
+ "modified_by": "Administrator",
+ "module": "Lic Deduction",
+ "name": "Installation",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:policy_name",
+ "creation": "2024-04-08 15:27:18.140073",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_blwvj",
+  "date",
+  "section_break_arwje",
+  "policy_type",
+  "column_break_5mb6a",
+  "policy_name",
+  "column_break_rfu46",
+  "policy_no",
+  "column_break_4jisz",
+  "policy_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_blwvj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_arwje",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "policy_type",
+   "fieldtype": "Link",
+   "label": "Policy Type",
+   "options": "Policy Type"
+  },
+  {
+   "fieldname": "column_break_5mb6a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "label": "Policy Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_rfu46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_amount",
+   "fieldtype": "Float",
+   "label": "Policy Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "policy_no",
+   "fieldtype": "Data",
+   "label": "Policy No"
+  },
+  {
+   "fieldname": "column_break_4jisz",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-08 16:19:46.537301",
+ "modified_by": "Administrator",
+ "module": "Lic Deduction",
+ "name": "Policy Name",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "policy_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

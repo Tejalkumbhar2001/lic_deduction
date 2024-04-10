@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include lic_deduction *.css
+recursive-include lic_deduction *.csv
+recursive-include lic_deduction *.html
+recursive-include lic_deduction *.ico
+recursive-include lic_deduction *.js
+recursive-include lic_deduction *.json
+recursive-include lic_deduction *.md
+recursive-include lic_deduction *.png
+recursive-include lic_deduction *.py
+recursive-include lic_deduction *.svg
+recursive-include lic_deduction *.txt
+recursive-exclude lic_deduction *.pyc
